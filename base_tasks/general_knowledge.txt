@@ -1,0 +1,13 @@
+custom|hellaswag_cf|0|0
+custom|arc_cf|0|0
+custom|mmlu_mcf|5|0
+custom|mmlu_redux_mcf|0|0
+custom|mmlu_pro_mcf|5|0
+custom|boolq_cf|0|0
+custom|commonsenseqa_cf|0|0
+custom|winogrande_cf|0|0
+custom|openbookqa_cf|0|0
+custom|piqa_cf|0|0
+custom|siqa_cf|0|0
+custom|gsm8k|5|0
+custom|agi_eval_mcf|0|0

@@ -1,0 +1,9 @@
+lighteval[multilingual]
+torch
+huggingface_hub
+ray
+more-itertools
+Pillow
+datasets==3.6.0
+langcodes
+language-data

@@ -1,0 +1,8 @@
+custom|tydiqa_eng|1|0
+custom|tydiqa_ara|1|0
+custom|tydiqa_ben|1|0
+custom|tydiqa_ind|1|0
+custom|tydiqa_jpn|1|0
+custom|tydiqa_kor|1|0
+custom|tydiqa_rus|1|0
+custom|tydiqa_tha|1|0

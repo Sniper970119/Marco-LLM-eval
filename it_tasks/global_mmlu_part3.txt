@@ -1,0 +1,9 @@
+custom|kaz_mmlu_it|0|0
+custom|zho_mmlu_it|0|0
+custom|ceval_it|0|0
+custom|ara_mmlu_it|0|0
+custom|tur_mmlu_it|0|0
+custom|indo_mmlu_it|0|0
+custom|indo_career_it|0|0
+custom|indo_culture_it|0|0
+custom|greek_mmlu_it|0|0

@@ -1,0 +1,11 @@
+custom|openai_mmlu_ara_mcf|0|0
+custom|openai_mmlu_ben_mcf|0|0
+custom|openai_mmlu_deu_mcf|0|0
+custom|openai_mmlu_spa_mcf|0|0
+custom|openai_mmlu_fra_mcf|0|0
+custom|openai_mmlu_ind_mcf|0|0
+custom|openai_mmlu_ita_mcf|0|0
+custom|openai_mmlu_jpn_mcf|0|0
+custom|openai_mmlu_kor_mcf|0|0
+custom|openai_mmlu_por_mcf|0|0
+custom|openai_mmlu_zho_mcf|0|0

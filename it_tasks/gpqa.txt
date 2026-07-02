@@ -1,0 +1,15 @@
+custom|gpqa_it|0|0
+custom|gpqa_it_ar|0|0
+custom|gpqa_it_bn|0|0
+custom|gpqa_it_zh|0|0
+custom|gpqa_it_cs|0|0
+custom|gpqa_it_en|0|0
+custom|gpqa_it_fr|0|0
+custom|gpqa_it_de|0|0
+custom|gpqa_it_hu|0|0
+custom|gpqa_it_ja|0|0
+custom|gpqa_it_ko|0|0
+custom|gpqa_it_es|0|0
+custom|gpqa_it_th|0|0
+custom|gpqa_it_ru|0|0
+custom|gpqa_it_vi|0|0

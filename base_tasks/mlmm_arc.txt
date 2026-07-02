@@ -1,0 +1,16 @@
+custom|mlmm_arc_ara_cf|0|0
+custom|mlmm_arc_ben_cf|0|0
+custom|mlmm_arc_deu_cf|0|0
+custom|mlmm_arc_spa_cf|0|0
+custom|mlmm_arc_fra_cf|0|0
+custom|mlmm_arc_hun_cf|0|0
+custom|mlmm_arc_ind_cf|0|0
+custom|mlmm_arc_ita_cf|0|0
+custom|mlmm_arc_nld_cf|0|0
+custom|mlmm_arc_por_cf|0|0
+custom|mlmm_arc_ron_cf|0|0
+custom|mlmm_arc_rus_cf|0|0
+custom|mlmm_arc_ukr_cf|0|0
+custom|mlmm_arc_vie_cf|0|0
+custom|mlmm_arc_zho_cf|0|0
+custom|mlmm_arc_nep_cf|0|0

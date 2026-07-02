@@ -1,0 +1,6 @@
+custom|indo_mmlu_it_native|0|0
+custom|indo_mmlu_it_english|0|0
+custom|indo_culture_it_native|0|0
+custom|indo_culture_it_english|0|0
+custom|indo_career_it_native|0|0
+custom|indo_career_it_english|0|0

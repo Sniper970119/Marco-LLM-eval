@@ -1,0 +1,5 @@
+custom|mmlu_it|0|0
+custom|mmlu_redux_it|0|0
+custom|mmlu_pro_it|0|0
+custom|agi_eval_it|0|0
+custom|gsm8k|0|0

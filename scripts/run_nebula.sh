@@ -1,0 +1,15 @@
+nebulactl run mdl -engine=xdl \
+                  --queue=<YOUR_QUEUE> \
+                  --entry="./eval_vlm.sh" \
+                  --job_name=marco_llm_eval \
+                  --algo_name=pytorch260 \
+                  --worker_count=1 \
+                  --file.cluster_file=./cluster.json \
+                  --nas_file_system_id=<YOUR_NAS_FILE_SYSTEM_ID> \
+                  --user_params="" \
+                  --user_id=<YOUR_USER_ID> \
+                  --user_name=<YOUR_USER_NAME> \
+                  --access_id=<YOUR_ACCESS_ID> \
+                  --access_key=<YOUR_ACCESS_KEY> \
+                  --nebula_project=<YOUR_PROJECT> \
+                  --custom_docker_image=<YOUR_DOCKER_IMAGE>

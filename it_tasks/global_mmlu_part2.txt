@@ -1,0 +1,12 @@
+custom|global_mmlu_it_nld|0|0
+custom|global_mmlu_it_pol|0|0
+custom|global_mmlu_it_rus|0|0
+custom|global_mmlu_it_vie|0|0
+custom|global_mmlu_it_ben|0|0
+custom|global_mmlu_it_ces|0|0
+custom|global_mmlu_it_heb|0|0
+custom|global_mmlu_it_ukr|0|0
+custom|global_mmlu_it_msa|0|0
+custom|global_mmlu_it_ron|0|0
+custom|global_mmlu_it_eng|0|0
+custom|global_mmlu_it_nep|0|0

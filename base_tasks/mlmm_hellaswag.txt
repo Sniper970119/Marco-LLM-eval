@@ -1,0 +1,16 @@
+custom|mlmm_hellaswag_ara_cf|0|0
+custom|mlmm_hellaswag_ben_cf|0|0
+custom|mlmm_hellaswag_deu_cf|0|0
+custom|mlmm_hellaswag_spa_cf|0|0
+custom|mlmm_hellaswag_fra_cf|0|0
+custom|mlmm_hellaswag_hun_cf|0|0
+custom|mlmm_hellaswag_ind_cf|0|0
+custom|mlmm_hellaswag_ita_cf|0|0
+custom|mlmm_hellaswag_nld_cf|0|0
+custom|mlmm_hellaswag_por_cf|0|0
+custom|mlmm_hellaswag_ron_cf|0|0
+custom|mlmm_hellaswag_rus_cf|0|0
+custom|mlmm_hellaswag_ukr_cf|0|0
+custom|mlmm_hellaswag_vie_cf|0|0
+custom|mlmm_hellaswag_zho_cf|0|0
+custom|mlmm_hellaswag_nep_cf|0|0

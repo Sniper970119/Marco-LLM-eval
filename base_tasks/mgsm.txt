@@ -1,0 +1,9 @@
+custom|mgsm:eng|8|0
+custom|mgsm:fra|8|0
+custom|mgsm:deu|8|0
+custom|mgsm:rus|8|0
+custom|mgsm:zho|8|0
+custom|mgsm:jpn|8|0
+custom|mgsm:tha|8|0
+custom|mgsm:ben|8|0
+custom|mgsm:spa|8|0
