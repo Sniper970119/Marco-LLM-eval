@@ -55,7 +55,7 @@ All commands below were run on 2 x H100s with 80GB of memory each, using the `vl
 ### Base model evaluation
 
 ```bash
-MODEL="Marco-LLM-Path"
+MODEL="ATH-MaaS/Marco-Nano-Instruct"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=32768,max_num_batched_tokens=32768,generation_parameters={temperature:0},tensor_parallel_size=2,gpu_memory_utilization=0.7"
 lighteval vllm \
     "$MODEL_ARGS" \
@@ -68,7 +68,7 @@ lighteval vllm \
 ### Instruct model evaluation (pure reasoning, no hybrid thinking)
 
 ```sh 
-MODEL="Marco-LLM-Path"
+MODEL="ATH-MaaS/Marco-Nano-Instruct"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,tensor_parallel_size=2,max_model_length=32768,gpu_memory_utilization=0.8,generation_parameters={max_new_tokens:32768,temperature:0.6,top_p:0.95}"
 lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
     --use-chat-template \
@@ -82,7 +82,7 @@ lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
 ```sh
 # Use /think or /no_think to enable or disable extended thinking
 SYSTEM_PROMPT="/no_think" 
-MODEL="Marco-LLM-Path"
+MODEL="ATH-MaaS/Marco-Nano-Instruct"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,tensor_parallel_size=2,max_model_length=32768,gpu_memory_utilization=0.8,generation_parameters={max_new_tokens:32768,temperature:0.6,top_p:0.95}"
 lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
     --use-chat-template \
@@ -95,13 +95,13 @@ lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
 ### Translation evaluation (FLORES+)
 
 ```sh
-MODEL="Marco-LLM-Path"
+MODEL="ATH-MaaS/Marco-Nano-Instruct"
 python scripts/eval_flores.py --model_path "$MODEL" --num_samples 8
 ```
 
 ### Translation evaluation (WMT24++)
 
 ```sh
-MODEL="Marco-LLM-Path"
+MODEL="ATH-MaaS/Marco-Nano-Instruct"
 python scripts/eval_wmt24.py --model_path "$MODEL" --num_samples 8
 ```
