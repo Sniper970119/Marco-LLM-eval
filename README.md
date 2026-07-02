@@ -46,31 +46,43 @@ GIT_LFS_SKIP_SMUDGE=1 uv pip install -r requirements.txt
 
 ## Running the evaluations
 
-All commands below were run on 2 x H100s with 80GB of memory each, using the `vllm` backend.
+The commands below match the configuration used in our evaluation runs.  GPU count is detected automatically.
 
 ### Base model evaluation
 
 ```bash
+export VLLM_WORKER_MULTIPROC_METHOD=spawn  # Required for vLLM
+
 MODEL="ATH-MaaS/Marco-Nano-Base"
-MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=32768,max_num_batched_tokens=32768,generation_parameters={temperature:0},tensor_parallel_size=2,gpu_memory_utilization=0.7"
-lighteval vllm \
-    "$MODEL_ARGS" \
-    "base_tasks/general_knowledge.txt" \
+
+NUM_GPUS=$([ -n "$CUDA_VISIBLE_DEVICES" ] && echo "$CUDA_VISIBLE_DEVICES" | tr -d ' ' | tr ',' '\n' | grep -v '^$' | wc -l || nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | wc -l)
+MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=4096,generation_parameters={temperature:0},tensor_parallel_size=$NUM_GPUS,gpu_memory_utilization=0.9"
+
+# Run all base benchmarks at once
+bash scripts/eval_base.sh
+```
+
+Or run a single benchmark directly:
+
+```bash
+lighteval vllm "$MODEL_ARGS" "base_tasks/general_knowledge.txt" \
     --custom-tasks "base_tasks.py" \
-    --output-dir "evals/" \
+    --output-dir "evals/$MODEL" \
     --save-details
 ```
+
+> Note: reasoning-heavy tasks (GPQA, BBH, MATH, PolyMATH, TydiQA) use `max_model_length=8192` and `gpu_memory_utilization=0.6` in the full script.
 
 ### Translation evaluation (FLORES+)
 
 ```sh
 MODEL="ATH-MaaS/Marco-Nano-Base"
-python scripts/eval_flores.py --model_path "$MODEL" --num_samples 8
+python scripts/eval_flores.py --model_path "$MODEL" --base True
 ```
 
 ### Translation evaluation (WMT24++)
 
 ```sh
 MODEL="ATH-MaaS/Marco-Nano-Base"
-python scripts/eval_wmt24.py --model_path "$MODEL" --num_samples 8
+python scripts/eval_wmt24.py --model_path "$MODEL" --base True
 ```
