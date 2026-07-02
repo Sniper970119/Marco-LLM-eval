@@ -55,7 +55,7 @@ All commands below were run on 2 x H100s with 80GB of memory each, using the `vl
 ### Base model evaluation
 
 ```bash
-MODEL="ATH-MaaS/Marco-Nano-Instruct"
+MODEL="your-base-model-path-or-hf-id"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=32768,max_num_batched_tokens=32768,generation_parameters={temperature:0},tensor_parallel_size=2,gpu_memory_utilization=0.7"
 lighteval vllm \
     "$MODEL_ARGS" \
@@ -65,9 +65,11 @@ lighteval vllm \
     --save-details
 ```
 
-### Instruct model evaluation (pure reasoning, no hybrid thinking)
+> Base models do **not** use `--use-chat-template` and do **not** support thinking control tokens.
 
-```sh 
+### Instruct model evaluation
+
+```sh
 MODEL="ATH-MaaS/Marco-Nano-Instruct"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,tensor_parallel_size=2,max_model_length=32768,gpu_memory_utilization=0.8,generation_parameters={max_new_tokens:32768,temperature:0.6,top_p:0.95}"
 lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
@@ -77,11 +79,17 @@ lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
     --save-details
 ```
 
-### Instruct model evaluation (with thinking control)
+### Instruct model evaluation (with hybrid thinking control)
+
+Marco-Nano-Instruct supports `/think` and `/no_think` system prompt tokens to enable or disable extended thinking.
 
 ```sh
-# Use /think or /no_think to enable or disable extended thinking
-SYSTEM_PROMPT="/no_think" 
+# Disable thinking (faster, lower token usage)
+SYSTEM_PROMPT="/no_think"
+
+# Enable thinking (better on complex reasoning tasks)
+# SYSTEM_PROMPT="/think"
+
 MODEL="ATH-MaaS/Marco-Nano-Instruct"
 MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,tensor_parallel_size=2,max_model_length=32768,gpu_memory_utilization=0.8,generation_parameters={max_new_tokens:32768,temperature:0.6,top_p:0.95}"
 lighteval vllm "$MODEL_ARGS" "it_tasks/general_knowledge.txt" \
