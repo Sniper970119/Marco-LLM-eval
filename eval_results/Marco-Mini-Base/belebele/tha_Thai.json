@@ -1,5 +1,5 @@
 {
-  "model": "ATH-MaaS/Marco-Nano-Base-17B",
+  "model": "ATH-MaaS/Marco-Mini-Base",
   "task": "belebele_tha_Thai_mcf",
   "language": "tha_Thai",
   "eval_date": "2026-03-08",

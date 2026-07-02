@@ -1,5 +1,5 @@
 {
-  "model": "ATH-MaaS/Marco-Nano-Base-17B",
+  "model": "ATH-MaaS/Marco-Mini-Base",
   "task": "belebele_zho_Hans_mcf",
   "language": "zho_Hans",
   "eval_date": "2026-03-08",

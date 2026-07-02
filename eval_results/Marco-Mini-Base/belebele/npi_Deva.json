@@ -1,5 +1,5 @@
 {
-  "model": "ATH-MaaS/Marco-Nano-Base-17B",
+  "model": "ATH-MaaS/Marco-Mini-Base",
   "task": "belebele_npi_Deva_mcf",
   "language": "npi_Deva",
   "eval_date": "2026-03-08",

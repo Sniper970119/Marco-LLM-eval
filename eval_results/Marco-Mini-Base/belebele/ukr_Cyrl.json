@@ -1,5 +1,5 @@
 {
-  "model": "ATH-MaaS/Marco-Nano-Base-17B",
+  "model": "ATH-MaaS/Marco-Mini-Base",
   "task": "belebele_ukr_Cyrl_mcf",
   "language": "ukr_Cyrl",
   "eval_date": "2026-03-08",
