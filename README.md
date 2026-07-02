@@ -86,3 +86,20 @@ python scripts/eval_flores.py --model_path "$MODEL" --base True
 MODEL="ATH-MaaS/Marco-Nano-Base"
 python scripts/eval_wmt24.py --model_path "$MODEL" --base True
 ```
+
+### Belebele evaluation
+
+Belebele is a multilingual reading comprehension benchmark. We evaluate on **29 languages** using multiple-choice format (`mcf`), zero-shot.
+
+Languages covered: Chinese (Simplified), Arabic, German, Spanish, French, Korean, Japanese, Portuguese, Turkish, Indonesian, Italian, Dutch, Polish, Russian, Vietnamese, Thai, Bengali, Czech, Hebrew, Ukrainian, Malay, Urdu, Kazakh, Greek, Romanian, Hungarian, English, Azerbaijani, Nepali.
+
+```bash
+MODEL="ATH-MaaS/Marco-Nano-Base"
+NUM_GPUS=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)
+MODEL_ARGS="model_name=$MODEL,dtype=bfloat16,max_model_length=4096,generation_parameters={temperature:0},tensor_parallel_size=$NUM_GPUS,gpu_memory_utilization=0.9"
+
+lighteval vllm "$MODEL_ARGS" "base_tasks/belebele.txt" \
+    --custom-tasks "base_tasks.py" \
+    --output-dir "evals/$MODEL" \
+    --save-details
+```
